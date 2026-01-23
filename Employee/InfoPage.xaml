@@ -1,0 +1,61 @@
+﻿<Page x:Class="MyCoffeCupApp.InfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyCoffeCupApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="600"
+      Title="InfoPage"  Background="GhostWhite">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="5" Grid.Row="0">
+          
+                <Image x:Name="UserImg" Source="/data/pictures/алина.jpg" Height="100" Width="100" Margin="10"/>
+            
+            <StackPanel Margin="5" VerticalAlignment="Center">
+                <TextBlock x:Name="FIO" Style="{StaticResource GenText}" Text="Имя" FontSize="25" FontWeight="Bold"/>
+                <TextBlock x:Name="Titletx" Style="{StaticResource GenText}" FontSize="20" Text="Должность"/>
+                <TextBlock x:Name="Num" Style="{StaticResource GenText}" FontSize="20" Text="89999999999" FontStyle="Italic"/>
+                
+            </StackPanel>
+            <Button Content="Отчет по отработанному времени"  Style="{StaticResource Buttons}" Height="30" Width="200" FontSize="10" Margin="90,60,0,0" Click="ButtonH_Click"/>
+        </StackPanel>
+       
+        <!-- График на неделю -->
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <DataGrid x:Name="dbShed" 
+          AutoGenerateColumns="False"
+          CanUserAddRows="False"
+          CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                        <DataGridTextColumn Header="День недели" 
+                                   Binding="{Binding DayName}" Width="150"/>
+                        <DataGridTextColumn Header="Дата" 
+                                   Binding="{Binding Date}" Width="100"/>
+                        <DataGridTextColumn Header="Начало" 
+                                   Binding="{Binding TimeStart}" Width="80"/>
+                        <DataGridTextColumn Header="Окончание" 
+                                   Binding="{Binding TimeEnd}" Width="80"/>
+                        <DataGridTextColumn Header="Примечание" 
+                                   Binding="{Binding Note}" Width="*"/>
+                    </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+
+        <!-- Кнопки действий -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button x:Name="btnCreateSchedule" Content="Создать график" 
+                    Width="120" Margin="0,0,10,0" Click="BtnCreateSchedule_Click" Style="{StaticResource Buttons}" FontSize="10" FontWeight="DemiBold"/>
+            <Button x:Name="btnSaveChanges" Content="Сохранить изменения" 
+                    Width="140" Margin="0,0,10,0" Click="BtnSaveChanges_Click" IsEnabled="False"  Style="{StaticResource Buttons}" FontSize="10" FontWeight="DemiBold"/>
+            
+        </StackPanel>
+    </Grid>
+</Page>

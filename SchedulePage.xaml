@@ -1,0 +1,49 @@
+﻿<Page x:Class="MyCoffeCupApp.SchedulePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyCoffeCupApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="SchedulePage"  Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Дата и кнопки навигации -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button x:Name="btnPrev" Click="BtnPrev_Click" Width="30" Height="30" Margin="0,0,20,0" Style="{StaticResource HelpButtons}">
+                <Image Source="/data/pictures/left.png" />
+            </Button>
+
+            <StackPanel>
+                <TextBlock x:Name="txtDate" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="txtDayOfWeek" FontSize="14" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <Button x:Name="btnNext" Click="BtnNext_Click" Width="30" Height="30" Margin="20,0,0,0" Style="{StaticResource HelpButtons}">
+                <Image Source="/data/pictures/right.png"/>
+            </Button>
+        </StackPanel>
+
+        <!-- Расписание -->
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" Margin="10">
+            <StackPanel x:Name="spSchedule" HorizontalAlignment="Center">
+                <TextBlock x:Name="txtNoSchedule" Text="Графика пока нет" 
+                          HorizontalAlignment="Center" VerticalAlignment="Center" 
+                          FontSize="16" Foreground="Gray" Visibility="Collapsed"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Кнопка месяца -->
+        <Button Grid.Row="3" x:Name="btnMonth" Content="месяц" 
+                HorizontalAlignment="Right" Margin="10" Width="80" Height="30" Style="{StaticResource Buttons}" Click="btnMonth_Click"/>
+    </Grid>
+   
+</Page>

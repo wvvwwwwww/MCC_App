@@ -1,0 +1,21 @@
+﻿<Page x:Class="MyCoffeCupApp.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyCoffeCupApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="200"
+      Title="MenuPage" Background="SlateGray">
+
+    <Grid>
+        <StackPanel Margin="0,10,0,0" VerticalAlignment="Center">
+           
+            <Button x:Name="btnInfo" Content="Информация" Style="{StaticResource HelpButtons}" Margin="5" Click="btnInfo_Click"/>
+            <Button x:Name="btnShedule" Content="Графики" Style="{StaticResource HelpButtons}" Margin="5" Click="btnShedule_Click"/>
+            <Button x:Name="btnHours" Content="О точках" Style="{StaticResource HelpButtons}" Margin="5" Click="btnHours_Click"/>
+            <Button x:Name="btnMeetings" Content="Собрания" Style="{StaticResource HelpButtons}" Margin="5" Click="btnMeetings_Click"/>
+          
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AutoPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Employee\EditScheduleWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Shedule\DayScheduleWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Employee\InfoPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MenuPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Employee\MyHoursPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SchedulePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Shedule\ScheduleWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

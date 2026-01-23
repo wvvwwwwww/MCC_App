@@ -1,0 +1,48 @@
+﻿<Window x:Class="MyCoffeCupApp.ScheduleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyCoffeCupApp"
+        mc:Ignorable="d"
+        Title="ScheduleWindow" Height="350" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- Название месяца и навигация -->
+        <Border Background="SlateGray" Grid.Row="1" >
+            <StackPanel  Orientation="Horizontal" 
+                    HorizontalAlignment="Center" Margin="10">
+                <Button x:Name="btnPrevMonth" Content="◀" 
+                    Width="30" Height="30" Click="btnPrevMonth_Click"/>
+                <TextBlock x:Name="txtMonthYear" FontSize="18" FontWeight="Bold" 
+                      Margin="20,0" VerticalAlignment="Center"/>
+                <Button x:Name="btnNextMonth" Content="▶" 
+                    Width="30" Height="30" Click="btnNextMonth_Click"/>
+            </StackPanel>
+        </Border>
+        <!-- Дни недели -->
+        <UniformGrid Grid.Row="2" Columns="7" Margin="10,0">
+            <TextBlock Text="Пн" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Вт" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Ср" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Чт" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Пт" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Сб" HorizontalAlignment="Center" FontWeight="Bold" />
+            <TextBlock Text="Вс" HorizontalAlignment="Center" FontWeight="Bold" />
+        </UniformGrid>
+
+        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto" Margin="10">
+            <!-- Grid будет создан в коде -->
+            <Grid x:Name="calendarContainer"/>
+        </ScrollViewer>
+
+    </Grid>
+</Window>
