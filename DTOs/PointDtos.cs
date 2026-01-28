@@ -1,4 +1,4 @@
-﻿namespace MyCoffeeCupApp.DTOs
+﻿namespace MccApi.DTOs
 {
     public class PointDtos
     {
