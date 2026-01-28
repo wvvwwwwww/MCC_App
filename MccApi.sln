@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36804.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MccApi", "MccApi.csproj", "{1331611F-BA9E-4531-94E3-7D0B68B4F54F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1331611F-BA9E-4531-94E3-7D0B68B4F54F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1331611F-BA9E-4531-94E3-7D0B68B4F54F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1331611F-BA9E-4531-94E3-7D0B68B4F54F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1331611F-BA9E-4531-94E3-7D0B68B4F54F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B43EE8EA-59C6-4DDB-9665-D25DC453F175}
+	EndGlobalSection
+EndGlobal
